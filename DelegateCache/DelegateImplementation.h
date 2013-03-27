@@ -10,6 +10,8 @@
 
 typedef struct _MyDelegateImplementationCache {
     IMP logMessage;
+    IMP shouldDisMiss;
 } MyDelegateImplementationCache;
 
 id CallDelegateString(IMP impletation, id delegate, SEL selector, NSString* arg1);
+BOOL CallDelegateReturnBOOL(IMP impletation, id delegate, SEL selector);

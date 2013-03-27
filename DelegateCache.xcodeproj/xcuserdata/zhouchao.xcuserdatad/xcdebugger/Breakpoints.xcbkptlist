@@ -8,18 +8,18 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DelegateCache/MyAlertView.m"
-         timestampString = "386049140.935158"
+         timestampString = "386061508.200539"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
+         startingLineNumber = "70"
+         endingLineNumber = "70"
          landmarkName = "-dismissWithClickedButtonIndex:animated:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
    <SymbolicBreakpoints>
       <SymbolicBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          symbolName = "objc_msgSend"

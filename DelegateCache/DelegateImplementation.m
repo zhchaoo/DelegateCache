@@ -34,3 +34,15 @@ id CallDelegateString(IMP impletation, id delegate, SEL selector, NSString* arg1
     return nil;
 }
 
+BOOL CallDelegateReturnBOOL(IMP impletation, id delegate, SEL selector)
+{
+    if (!delegate || ![delegate respondsToSelector:selector])
+        return NO;
+    @try {
+        BOOL result =(BOOL)((BOOL (*)(id, SEL))(impletation)(delegate, @selector(selector)));
+        return result;
+    } @catch(id exception) {
+        ReportDiscardedDelegateException(selector, exception);
+    }
+    return NO;
+}

@@ -60,13 +60,17 @@ static inline IMP getMethod(id o, SEL s)
     
     // Get all the method's implecation and cache it in a struct.
     cache->logMessage = getMethod(delegate, @selector(logMessage:));
+    cache->shouldDisMiss = getMethod(delegate, @selector(shouldDisMiss));
 }
 
 - (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex animated:(BOOL)animated
 {
     // Call the method from the delegate cache.
     CallDelegateString(_delegateCache.logMessage, self.delegate, @selector(logMessage:), @"the delegate method's impletation has been cached!\n");
-    [super dismissWithClickedButtonIndex:buttonIndex animated:animated];
+    if (CallDelegateReturnBOOL(_delegateCache.shouldDisMiss, self.delegate, @selector(shouldDisMiss)))
+        [super dismissWithClickedButtonIndex:buttonIndex animated:animated];
+    else
+        return;
 }
 
 @end

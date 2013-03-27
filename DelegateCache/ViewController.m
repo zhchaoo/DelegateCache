@@ -45,7 +45,13 @@
 
 - (void)logMessage:(NSString *)message
 {
-    NSLog(@"logMessage %@\n", message);
+    NSLog(@"%s %@\n", __FUNCTION__, message);
+}
+
+- (BOOL)shouldDisMiss
+{
+    NSLog(@"%s\n", __FUNCTION__);
+    return YES;
 }
 
 @end

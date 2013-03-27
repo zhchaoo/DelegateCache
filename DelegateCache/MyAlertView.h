@@ -12,6 +12,7 @@
 @protocol MyDelegate <NSObject>
 
 - (void)logMessage:(NSString*) message;
+- (BOOL)shouldDisMiss;
 
 @end
 
