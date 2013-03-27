@@ -19,6 +19,8 @@
 		954216281701A48A0051B499 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954216271701A48A0051B499 /* ViewController.m */; };
 		9542162B1701A48A0051B499 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954216291701A48A0051B499 /* ViewController_iPhone.xib */; };
 		9542162E1701A48A0051B499 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9542162C1701A48A0051B499 /* ViewController_iPad.xib */; };
+		954216371701A53A0051B499 /* MyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 954216361701A53A0051B499 /* MyAlertView.m */; };
+		9542163A1701AEEE0051B499 /* DelegateImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 954216391701AEEE0051B499 /* DelegateImplementation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		954216271701A48A0051B499 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9542162A1701A48A0051B499 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		9542162D1701A48A0051B499 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		954216351701A53A0051B499 /* MyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAlertView.h; sourceTree = "<group>"; };
+		954216361701A53A0051B499 /* MyAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAlertView.m; sourceTree = "<group>"; };
+		954216381701AEEE0051B499 /* DelegateImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateImplementation.h; sourceTree = "<group>"; };
+		954216391701AEEE0051B499 /* DelegateImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateImplementation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,10 @@
 				954216271701A48A0051B499 /* ViewController.m */,
 				954216291701A48A0051B499 /* ViewController_iPhone.xib */,
 				9542162C1701A48A0051B499 /* ViewController_iPad.xib */,
+				954216351701A53A0051B499 /* MyAlertView.h */,
+				954216361701A53A0051B499 /* MyAlertView.m */,
+				954216381701AEEE0051B499 /* DelegateImplementation.h */,
+				954216391701AEEE0051B499 /* DelegateImplementation.m */,
 				954216151701A48A0051B499 /* Supporting Files */,
 			);
 			path = DelegateCache;
@@ -180,6 +190,8 @@
 				9542161B1701A48A0051B499 /* main.m in Sources */,
 				9542161F1701A48A0051B499 /* AppDelegate.m in Sources */,
 				954216281701A48A0051B499 /* ViewController.m in Sources */,
+				954216371701A53A0051B499 /* MyAlertView.m in Sources */,
+				9542163A1701AEEE0051B499 /* DelegateImplementation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +322,7 @@
 				954216331701A48A0051B499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
