@@ -24,7 +24,7 @@ id CallDelegateString(IMP impletation, id delegate, SEL selector, NSString* arg1
     if (!delegate || ![delegate respondsToSelector:selector])
         return nil;
     @try {
-        id result =(id (*)(id, SEL, NSString*))(impletation)(delegate, @selector(selector), arg1);
+        id result =(id)((id (*)(id, SEL, NSString*))(impletation)(delegate, @selector(selector), arg1));
         return result;
         
         

@@ -32,7 +32,8 @@
 {
     _mydelegate = mydelegate;
     
-    [self _cacheFrameLoadDelegateImplementations];
+    // Initialize the Delegate Implementation Cache.
+    [self _cacheMyDelegateImplementations];
 }
 
 - (id<MyDelegate>)mydelegate
@@ -42,13 +43,11 @@
 
 
 static inline IMP getMethod(id o, SEL s)
-
 {
-    
     return [o respondsToSelector:s] ? [o methodForSelector:s] : 0;
 }
 
-- (void)_cacheFrameLoadDelegateImplementations
+- (void)_cacheMyDelegateImplementations
 {
     MyDelegateImplementationCache *cache = &(_delegateCache);
     id delegate = self.mydelegate;
@@ -59,15 +58,14 @@ static inline IMP getMethod(id o, SEL s)
         return;
     }
     
+    // Get all the method's implecation and cache it in a struct.
     cache->logMessage = getMethod(delegate, @selector(logMessage:));
 }
 
 - (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex animated:(BOOL)animated
 {
-//    [self.mydelegate logMessage:@"dismiss!!!!!\n"];
-    CallDelegateString(_delegateCache.logMessage, self.delegate, @selector(logMessage:), @"dismiss!!!!!\n");
-    NSLog(@"%s\n", __FUNCTION__);
-    
+    // Call the method from the delegate cache.
+    CallDelegateString(_delegateCache.logMessage, self.delegate, @selector(logMessage:), @"the delegate method's impletation has been cached!\n");
     [super dismissWithClickedButtonIndex:buttonIndex animated:animated];
 }
 

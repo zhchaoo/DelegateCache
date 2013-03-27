@@ -21,9 +21,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 60, 20)];
-    
     [btn setTitle:@"Click" forState:UIControlStateNormal];
-    
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:btn];
